@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Classificação por XP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Verificador de Classificação</h1>
+
+  <input type="text" id="nome" placeholder="Digite seu nome">
+  <input type="number" id="xp" placeholder="Digite seu XP">
+  <button onclick="verificarClassificacao()">Verificar</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function verificarClassificacao() {
+      const nome = document.getElementById("nome").value.trim();
+      const xp = parseInt(document.getElementById("xp").value);
+      let classificacao = "";
+
+      if (isNaN(xp) || nome === "") {
+        document.getElementById("resultado").innerText = "Por favor, preencha todos os campos corretamente.";
+        return;
+      }
+
+      if (xp <= 1000) {
+        classificacao = "Ferro";
+      } else if (xp <= 2000) {
+        classificacao = "Bronze";
+      } else if (xp <= 5000) {
+        classificacao = "Prata";
+      } else if (xp <= 7000) {
+        classificacao = "Ouro";
+      } else if (xp <= 8000) {
+        classificacao = "Platina";
+      } else if (xp <= 9000) {
+        classificacao = "Ascendente";
+      } else if (xp <= 10000) {
+        classificacao = "Imortal";
+      } else {
+        classificacao = "Radiante";
+      }
+
+      document.getElementById("resultado").innerText = `Jogador ${nome}, sua classificação é: ${classificacao}`;
+    }
+  </script>
+
+</body>
+</html>

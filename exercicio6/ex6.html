@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let letras = prompt("Digite uma letra: ");
+       let vogais = ["a", "e", "i", "o", "u"];
+       if (letras.length > 1) {
+           alert("Digite apenas uma letra");
+       } else if (letras.length == 0) {
+           alert("Digite uma letra");
+       } else {
+           if (vogais.includes(letras.toLowerCase())) {
+               alert("A letra " + letras + " é uma vogal");
+           } else {
+               alert("A letra " + letras + " não é uma vogal");
+           }
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pizzaria calculadora</title>
+
+</head>
+<body>
+    <form>
+        <label for="total">Valor total da conta:</label>
+        <input type="number" id="total" name="total" required>
+        <br>
+        <label for="clientes">Número de clientes:</label>
+        <input type="number" id="clientes" name="clientes" required>
+        <br>
+        <input type="submit" value="Calcular">
+    </form>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const total = parseFloat(document.getElementById('total').value);
+            const clientes = parseInt(document.getElementById('clientes').value);
+            const valorPorCliente = total / clientes;
+            alert(`Valor a ser pago por cliente: R$ ${valorPorCliente.toFixed(2)}`);
+        });
+    </script>
+</body>
+</html>
