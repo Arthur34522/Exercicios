@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação de Produtos</title>
+</head>
+<body>
+    <h1>Classificação de Produtos</h1>
+    <form id="productForm">
+        <label for="productCode">Código do Produto:</label>
+        <input type="text" id="productCode" name="productCode" required>
+        <button type="submit">Classificar</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        document.getElementById("productForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const productCode = parseInt(document.getElementById("productCode").value);
+            let classification = "";
+
+            if (productCode >= 1 && productCode <= 15) {
+                switch (productCode) {
+                    case 1:
+                        classification = "Alimento Não Perecível";
+                        break;
+                    case 2:
+                    case 3:
+                    case 4:
+                        classification = "Alimento Perecível";
+                        break;
+                    case 5:
+                    case 6:
+                        classification = "Vestuário";
+                        break;
+                    case 7:
+                        classification = "Higiene";
+                        break;
+                    case 8:
+                        classification = "Limpeza";
+                        break;
+                    default:
+                        classification = "Utensílios";
+                        break;
+                }
+            } else {
+                classification = "Código inválido";
+            }
+
+            document.getElementById("result").innerText = "Classificação: " + classification;
+        });
+    </script>
+</body>
+</html>
