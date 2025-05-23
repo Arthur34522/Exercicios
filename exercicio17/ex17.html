@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero1, numero2, resposta, operacao;
+
+        do {
+            operacao=prompt("Digite o número correspondente à operação desejada:\n1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão");
+            numero1 = parseInt(prompt("Digite o primeiro número:"));
+            numero2 = parseInt(prompt("Digite o segundo número:"));
+            switch (operacao) {
+                case "1":
+                    resultado = numero1 + numero2;
+                    alert("o resultado da adição é: " + resultado);
+                    break;
+                case "2":
+                    resultado = numero1 - numero2;
+                    alert("o resultado da subtração é: " + resultado);
+                    break;
+                case "3":
+                    resultado = numero1 * numero2;
+                    alert("o resultado da multiplicação é: " + resultado);
+                    break;
+                case "4":
+                    resultado = numero1 / numero2;
+                    alert("o resultado da divisão é: " + resultado);
+                    break;
+                default:
+                    alert("Operação inválida. Tente novamente.");
+                    break;
+            }
+            
+            resposta = prompt("Deseja realizar outra operação? (s/n)");
+        } while (resposta.toLowerCase() === "s");
+    </script>
+            
