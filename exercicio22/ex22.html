@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>semana</title>
+</head>
+<body>
+    <script>
+        function diaDaSemana(dia) {
+            switch (dia) {
+                case 0:
+                    return "Domingo";
+                case 1:
+                    return "Segunda-feira";
+                case 2:
+                    return "Terça-feira";
+                case 3:
+                    return "Quarta-feira";
+                case 4:
+                    return "Quinta-feira";
+                case 5:
+                    return "Sexta-feira";
+                case 6:
+                    return "Sábado";
+                default:
+                    return "Dia inválido";
+            }
+        }
+
+        let dia = parseInt(prompt("Digite um número de 0 a 6 para o dia da semana:"));
+        alert(diaDaSemana(dia));
+    </script>
+    
+</body>
+</html>

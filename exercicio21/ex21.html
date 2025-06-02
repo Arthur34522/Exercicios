@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calMed(v1, v2, v3, v4,) {
+            let resp;
+            resp = (v1 + v2 + v3 + v4) / 4;
+            return resp;
+        }
+        function imprime(resp) {
+            if (resp >= 7) {
+                alert("Aprovado com média: " + resp);
+            } else if (resp >= 5) {
+                alert("Recuperação com média: " + resp);
+            } else {
+                alert("Reprovado com média: " + resp);
+            }
+        }
+
+        let n1, n2, n3, n4, media;
+        n1 = parseFloat(prompt("Digite a primeira nota:"));
+        n2 = parseFloat(prompt("Digite a segunda nota:"));
+        n3 = parseFloat(prompt("Digite a terceira nota:"));
+        n4 = parseFloat(prompt("Digite a quarta nota:"));
+        let media = calMed(n1, n2, n3, n4);
+        imprime(media);
+    </script>
+    
+</body>
+</html>
