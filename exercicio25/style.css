@@ -1,0 +1,128 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.grupo-input {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#entrada-tarefa {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+}
+
+#seletor-prioridade {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-left: none;
+    border-right: none;
+}
+
+#botao-adicionar {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#botao-adicionar:hover {
+    background-color: #45a049;
+}
+
+.filtros {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.botao-filtro {
+    padding: 8px 12px;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.botao-filtro.ativo {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.lista-tarefas {
+    list-style-type: none;
+    padding: 0;
+}
+
+.item-tarefa {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.item-tarefa.baixa {
+    background-color: #e6f7ff;
+    border-left: 4px solid #1890ff;
+}
+
+.item-tarefa.media {
+    background-color: #fff7e6;
+    border-left: 4px solid #faad14;
+}
+
+.item-tarefa.alta {
+    background-color: #fff1f0;
+    border-left: 4px solid #ff4d4f;
+}
+
+.item-tarefa.concluida {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.texto-tarefa {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.botao-excluir {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.estatisticas {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    font-size: 14px;
+}

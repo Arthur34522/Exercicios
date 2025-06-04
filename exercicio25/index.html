@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas com Prioridade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Lista de Tarefas com Prioridade</h1>
+
+        <div class="grupo-input">
+            <input type="text" id="entrada-tarefa" placeholder="Digite uma nova tarefa...">
+            <select id="seletor-prioridade">
+                <option value="baixa">Baixa</option>
+                <option value="media">Média</option>
+                <option value="alta">Alta</option>
+            </select>
+            <button id="botao-adicionar">Adicionar</button>
+        </div>
+
+        <div class="filtros">
+            <button class="botao-filtro ativo" data-filtro="todas">Todas</button>
+            <button class="botao-filtro" data-filtro="baixa">Baixa</button>
+            <button class="botao-filtro" data-filtro="media">Média</button>
+            <button class="botao-filtro" data-filtro="alta">Alta</button>
+            <button class="botao-filtro" data-filtro="concluidas">Concluídas</button>
+        </div>
+
+        <ul class="lista-tarefas" id="lista-tarefas">
+            <!-- Tarefas serão adicionadas aqui via JavaScript -->
+        </ul>
+
+        <div class="estatisticas" id="estatisticas">
+            Total: 0 | Concluídas: 0 | Pendentes: 0
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
